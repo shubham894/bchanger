@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Removal App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Background Removal Tool</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" name="image" required>
+            <button type="submit">Upload and Remove Background</button>
+        </form>
+        <div id="loadingSpinner" class="loading-spinner" style="display:none;">
+            <p>Loading...</p>
+        </div>
+        <div class="image-container">
+            <div id="originalImageContainer" class="image-box"></div>
+            <div id="resultContainer" class="image-box">
+                <!-- Download button will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
